@@ -1,5 +1,5 @@
 import Button from '@/components/Button'
-import InputForm from '@/components/InputForm'
+import InputForm from '@/components/RegistrationForm'
 import React from 'react'
 
 const page = () => {

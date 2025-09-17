@@ -376,14 +376,28 @@ const InputForm = () => {
               <label htmlFor="lastClass" className="block mb-1 font-medium text-gray-700">
                 اخری پاس کردہ درجہ/کلاس
               </label>
-              <input
+              {/* <input
                 type="text"
                 id="lastClass"
                 name="lastClass"
                 value={formData.lastClass}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
-              />
+              /> */}
+               <select
+                id="grade"
+                name="grade"
+                value={formData.grade}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none  appearance-none text-sm"
+              >
+                <option value="">انتخاب کریں</option>
+                {shuabay.map((item, index) => (
+                  <option key={index} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label htmlFor="taqdeer" className="block mb-1 font-medium text-gray-700">
