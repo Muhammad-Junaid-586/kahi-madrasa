@@ -1,7 +1,18 @@
 /* InputForm.css */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
 
-label,::placeholder,h1 , button{
+label,::placeholder,h1 , button , .heading, table{
   font-family: 'Noto Nastaliq Urdu', serif;
 }
 
+tr, td, th{
+  font-family: 'Noto Nastaliq Urdu', serif;
+  border: 1px solid #ddd;
+  /* padding: 8px; */
+  text-align: center;
+  
+}
+
+label{
+  margin-bottom: 6px;
+}

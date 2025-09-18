@@ -1,8 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import  "../components/styles/inputForm.css";
 import axios from "axios";
+import { pakistanData } from "@/public/assests/data";
+import { useAppContext } from "@/context/AppContext";
+
 
 // شعبے
 const shuabay = [
@@ -28,12 +31,20 @@ const ahataData = {
   "حبیب منزل": 18,
   "جدید منزل": 15,
   "احاطہ عثمانیہ": 16,
-  "احاطہ برکاتیہ": 7,
+  "احاطہ برہانیہ": 7,
   "احاطہ ابن عباس": 8,
-  "احاطہ سیداکرم دین": 28,
-  "احاطہ ابو ہریرہ صدیقی": 7,
+  "احاطہ سعیدالکونین": 28,
+  "احاطہ ابو بکر صدیق": 7,
   "دارالحافظ": 10,
 };
+
+// function loopingRooms(room){
+//   let rooms = []
+//   for (let i = 1; i <= room; i++) {
+//     rooms.push(i)
+//   }
+//   return rooms
+// }
 
 const taqdeer = [
   { name: "راسب", range: "1 تا 239 نمبر" },
@@ -65,6 +76,43 @@ const InputForm = () => {
     taqdeerRange: "",
   });
 
+  const {fetchStudentsData} = useAppContext();
+
+
+  
+  // districts and tehsil\
+  // Function to extract all districts and their tehsils
+const getAllDistricts = () => {
+  const districts = {};
+  
+  pakistanData.Pakistan.provinces.forEach(province => {
+    province.divisions.forEach(division => {
+      division.districts.forEach(district => {
+        districts[district.name] = district.tehsils;
+      });
+    });
+  });
+  
+  return districts;
+};
+
+
+const allDistricts = getAllDistricts();
+
+const [tehsils, setTehsils] = useState([]);
+
+  // Update tehsils when district changes
+  useEffect(() => {
+    if (formData.district && allDistricts[formData.district]) {
+      setTehsils(allDistricts[formData.district]);
+      setFormData(prev => ({ ...prev, tehsil: "" }));
+    } else {
+      setTehsils([]);
+    }
+  }, [formData.district]);
+
+
+  // districts and tehsil
   // handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -82,6 +130,17 @@ const InputForm = () => {
       }));
     }
   };
+
+  function loopingRooms(room){
+  let rooms = []
+  for (let i = 1; i <= room; i++) {
+    rooms.push(i)
+  }
+  return rooms
+}
+
+  const rooms = formData.ahata ? loopingRooms(ahataData[formData.ahata]) : [];
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -109,7 +168,10 @@ const InputForm = () => {
         taqdeer: "",
         ahataRooms: "",
         admissionNo: "",
-      })
+      });
+    fetchStudentsData();
+    console.log("data fetch successfully");
+    
       } else {
         alert("❌ " + res.data.message)
       }
@@ -125,9 +187,11 @@ const InputForm = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-green-100 to-green-200 ">
       <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8" dir="rtl">
-        <h1 className="text-2xl font-bold text-center mb-6 text-green-700">
-          رجسٹریشن فارم
-        </h1>
+        <h1 className="text-2xl font-bold text-center mb-6 text-green-700 heading">جامعہ دارالعلوم سراج الاسلام کاہی ہنگو</h1>
+        <h2 className="text-2xl  text-center mb-6 text-green-700 heading">
+          داخلہ فارم
+
+        </h2>
 
         <form className="space-y-6" onSubmit={handleSubmit}>
           {/* نام + ولدیت */}
@@ -215,14 +279,20 @@ const InputForm = () => {
               <label htmlFor="district" className="block mb-1 font-medium text-gray-700">
                 ضلع
               </label>
-              <input
-                type="text"
+              <select
                 id="district"
                 name="district"
                 value={formData.district}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
-              />
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none"
+              >
+                <option value="">انتخاب کریں</option>
+                {Object.keys(allDistricts).map((district, index) => (
+                  <option key={index} value={district}>
+                    {district}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
 
@@ -232,14 +302,21 @@ const InputForm = () => {
               <label htmlFor="tehsil" className="block mb-1 font-medium text-gray-700">
                 تحصیل
               </label>
-              <input
-                type="text"
+              <select
                 id="tehsil"
                 name="tehsil"
                 value={formData.tehsil}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
-              />
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none"
+                disabled={!formData.district}
+              >
+                <option value="">انتخاب کریں</option>
+                {tehsils.map((tehsil, index) => (
+                  <option key={index} value={tehsil}>
+                    {tehsil}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label htmlFor="cnic" className="block mb-1 font-medium text-gray-700">
@@ -251,7 +328,7 @@ const InputForm = () => {
                 name="cnic"
                 value={formData.cnic}
                 onChange={handleChange}
-                placeholder="12345-1234567-1"
+                placeholder="00000-00000000-0"
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
               />
             </div>
@@ -269,7 +346,7 @@ const InputForm = () => {
                 name="contact"
                 value={formData.contact}
                 onChange={handleChange}
-                placeholder="0300-1234567"
+                placeholder="0000-0000000"
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
               />
             </div>
@@ -304,45 +381,54 @@ const InputForm = () => {
           </div>
 
           {/* احاطہ منتخب کریں + کمرے */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="ahata" className="block mb-1 font-medium text-gray-700">
-                احاطہ منتخب کریں
-              </label>
-              <select
-                id="ahata"
-                name="ahata"
-                value={formData.ahata}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none text-sm "
-              >
-                <option value="">انتخاب کریں</option>
-                {Object.keys(ahataData).map((key) => (
-                  <option key={key} value={key}>
-                    {key}
-                  </option>
-                ))}
-              </select>
-            </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            <div>
-              <label htmlFor="ahataRooms" className="block mb-1 font-medium text-gray-700">
-                کمرے کی تعداد
-              </label>
-              <input
-                type="text"
-                id="ahataRooms"
-                name="ahataRooms"
-                value={formData.ahataRooms ? `${formData.ahataRooms} کمرے` : ""}
-                readOnly
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-gray-100 focus:outline-none"
-              />
-            </div>
-          </div>
+  {/* Ahata Selection */}
+  <div>
+    <label htmlFor="ahata" className="block mb-1 font-medium text-gray-700">
+      احاطہ منتخب کریں
+    </label>
+    <select
+      id="ahata"
+      name="ahata"
+      value={formData.ahata}
+      onChange={handleChange}
+      className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+    >
+      <option value="">انتخاب کریں</option>
+      {Object.keys(ahataData).map((ahata, i) => (
+        <option key={i} value={ahata}>{ahata}</option>
+      ))}
+    </select>
+  </div>
 
-          {/* کمرہ نمبر + سابقہ مدرسہ */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
+  {/* Room Selection */}
+  <div>
+    <label htmlFor="room" className="block mb-1 font-medium text-gray-700">
+      کمرہ نمبر
+    </label>
+    <select
+      id="room"
+      name="room"
+      value={formData.room}
+      onChange={handleChange}
+      className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+    >
+      <option value="">انتخاب کریں</option>
+      {rooms.map((room, i) => (
+        <option key={i} value={room}>{room}</option>
+      ))}
+    </select>
+  </div>
+
+</div>
+
+ <hr className="h-[2px] bg-gray-400 border-0 rounded" />
+      <h3 className="text-2xl  text-center text-gray-700  mb-4 heading">جدید طلبہ کے لیے</h3>
+
+          {/* سابقہ مدرسہ */}
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
+            {/* <div>
               <label htmlFor="room" className="block mb-1 font-medium text-gray-700 ">
                 کمرہ نمبر
               </label>
@@ -354,7 +440,7 @@ const InputForm = () => {
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
               />
-            </div>
+            </div> */}
             <div>
               <label htmlFor="previousSchool" className="block mb-1 font-medium text-gray-700">
                 سابقہ مدرسہ (نام اور پتہ)
@@ -385,9 +471,9 @@ const InputForm = () => {
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
               /> */}
                <select
-                id="grade"
-                name="grade"
-                value={formData.grade}
+                id="lastClass"
+                name="lastClass"
+                value={formData.lastClass}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none  appearance-none text-sm"
               >
@@ -406,7 +492,7 @@ const InputForm = () => {
               <select
                 id="taqdeer"
                 name="taqdeer"
-                value={formData.grade}
+                value={formData.taqdeer}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none  appearance-none text-sm"
               >
