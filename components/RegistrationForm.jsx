@@ -65,6 +65,8 @@ const InputForm = () => {
     cnic: "",
     contact: "",
     guardian: "",
+    guardianFather: "",
+    dateOfBirth: "",
     address: "",
     room: "",
     previousSchool: "",
@@ -159,6 +161,8 @@ const [tehsils, setTehsils] = useState([]);
         cnic: "",
         contact: "",
         guardian: "",
+        guardianFather: "",
+        dateOfBirth: "",
         address: "",
         room: "",
         previousSchool: "",
@@ -359,6 +363,32 @@ const [tehsils, setTehsils] = useState([]);
                 id="guardian"
                 name="guardian"
                 value={formData.guardian}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+              />
+            </div>
+            <div>
+              <label htmlFor="guardianFather" className="block mb-1 font-medium text-gray-700">
+                ولدیت
+              </label>
+              <input
+                type="text"
+                id="guardianFather"
+                name="guardianFather"
+                value={formData.guardianFather}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+              />
+            </div>
+            <div>
+              <label htmlFor="dateOfBirth" className="block mb-1 font-medium text-gray-700">
+                تاریخ پیدائش
+              </label>
+              <input
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                value={formData.dateOfBirth}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
               />

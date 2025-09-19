@@ -5,12 +5,26 @@ import React, { useContext, useEffect, useState } from 'react'
 import FormDialog from './custumComp/FormDialog'
 import { useAppContext } from '@/context/AppContext'
 import './../components/styles/inputForm.css'
+import { FaTrash, FaEdit, FaEye } from "react-icons/fa";
+import { Eye, Pencil, PencilIcon, Trash, Trash2 } from "lucide-react";
 
 const StudentsData = () => {
 
   const { fetchStudentsData, students , setStudents } = useAppContext()
 
   // const [students, setStudents] = useState([])
+
+
+  const handleDelete = async (student) => { 
+      try { 
+         await axios.delete(`/api/student/${student._id}`);
+        alert("Deleted Successfully!");
+        // optionally reload students list
+        fetchStudentsData();
+      } catch (error) { 
+         console.error(error);
+      }
+    }
 
   useEffect(() => {
     
@@ -66,33 +80,41 @@ const StudentsData = () => {
                 <td className="px-1 py-2 font-semibold text-amber-700">
                   {student.taqdeer}
                 </td>
-            <td className=' flex  gap-1 items-center justify-center'>
+            <td className=' flex  gap-2 py-2 items-center justify-center'>
                 
-  <button 
-    onClick={async () => {
-      try {
-        await axios.delete(`/api/student/${student._id}`);
-        alert("Deleted Successfully!");
-        // optionally reload students list
-        fetchStudentsData();
-      } catch (error) {
-        console.error(error);
-      }
-    }}
-    className="px-4 py-2 my-1 bg-red-600 rounded-lg text-white/80 hover:text-white cursor-pointer"
-  >
-    X
-  </button>
+  {/* <button  */}
+  {/* //   onClick={async () => { */}
+  {/* //     try { */}
+  {/* //       await axios.delete(`/api/student/${student._id}`);
+  //       alert("Deleted Successfully!");
+  //       // optionally reload students list
+  //       fetchStudentsData();
+  //     } catch (error) { */}
+  {/* //       console.error(error);
+  //     }
+  //   }}
+  //   className="px-4 py-2 my-1 bg-red-600 rounded-lg text-white/80 hover:text-white cursor-pointer"
+  // >
+  //   X
+  // </button> */}
 
 
 
 
-  <Link href={`/students/${student._id}`} className='my-1'>
+  {/* <Link href={`/students/${student._id}`} className='my-1'>
     <button className="px-4 py-2 bg-amber-600 rounded-lg text-white/80 hover:text-white cursor-pointer">
       Edit
     </button>
-  </Link>
-
+  </Link> */}
+  
+      <Link href={`/dashboard/${student._id}`}>
+      <Eye  className="text-blue-500 cursor-pointer text-xl" title="View" />
+      </Link>
+      <Link href={`/students/${student._id}`}>
+      <PencilIcon className="text-green-500 cursor-pointer text-xl" title="Edit" />
+      </Link>
+      <Trash2 onClick={() => handleDelete(student)} className="text-red-500 cursor-pointer text-xl" title="Delete" />
+    
             </td>
 
               </tr>

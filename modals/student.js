@@ -37,6 +37,14 @@ const studentSchema = new mongoose.Schema({
     type : String,
     required : true,
   },
+  guardianFather: {
+    type : String,
+    required : true,
+  },
+  dateOfBirth: {
+    type : String,
+    required : true,
+  },
   address: {
     type : String,
     required : true,
