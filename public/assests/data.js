@@ -2,807 +2,807 @@ export const pakistanData = {
   "Pakistan": {
     "provinces": [
       {
-        "name": "Punjab",
+        "name": "پنجاب",
         "divisions": [
           {
-            "name": "Lahore Division",
+            "name": "لاہور ڈویژن",
             "districts": [
               {
-                "name": "Lahore District",
-                "tehsils": ["Lahore City", "Lahore Cantt", "Model Town", "Raiwind", "Shalimar"]
+                "name": "ضلع لاہور",
+                "tehsils": ["لاہور سٹی", "لاہور کینٹ", "ماڈل ٹاؤن", "رائیونڈ", "شالیمار"]
               },
               {
-                "name": "Kasur District",
-                "tehsils": ["Kasur", "Chunian", "Kot Radha Kishan", "Pattoki"]
+                "name": "ضلع قصور",
+                "tehsils": ["قصور", "چونیان", "کوٹ رادھا کشن", "پٹوکی"]
               },
               {
-                "name": "Nankana Sahib District",
-                "tehsils": ["Nankana Sahib", "Sangla Hill", "Shah Kot"]
+                "name": "ضلع ننکانہ صاحب",
+                "tehsils": ["ننکانہ صاحب", "سانگلہ ہل", "شاہ کوٹ"]
               },
               {
-                "name": "Sheikhupura District",
-                "tehsils": ["Sheikhupura", "Ferozewala", "Muridke", "Sharaqpur"]
+                "name": "ضلع شیخوپورہ",
+                "tehsils": ["شیخوپورہ", "فیروزوالا", "مریدکے", "شرقپور"]
               }
             ]
           },
           {
-            "name": "Rawalpindi Division",
+            "name": "راولپنڈی ڈویژن",
             "districts": [
               {
-                "name": "Rawalpindi District",
-                "tehsils": ["Rawalpindi", "Gujar Khan", "Kahuta", "Kallar Syedan", "Taxila"]
+                "name": "ضلع راولپنڈی",
+                "tehsils": ["راولپنڈی", "گوجر خان", "کہوٹہ", "کلاڑ سیداں", "ٹیکسلا"]
               },
               {
-                "name": "Attock District",
-                "tehsils": ["Attock", "Fateh Jang", "Hassan Abdal", "Jand", "Pindi Gheb"]
+                "name": "ضلع اٹک",
+                "tehsils": ["اٹک", "فتح جنگ", "حسن ابدال", "جند", "پنڈی گھیب"]
               },
               {
-                "name": "Chakwal District",
-                "tehsils": ["Chakwal", "Choa Saidan Shah", "Kallar Kahar", "Talagang"]
+                "name": "ضلع چکوال",
+                "tehsils": ["چکوال", "چوآ سیداں شاہ", "کلاڑ کہار", "تلہ گنگ"]
               },
               {
-                "name": "Jhelum District",
-                "tehsils": ["Jhelum", "Pind Dadan Khan", "Sohawa", "Dina"]
+                "name": "ضلع جہلم",
+                "tehsils": ["جہلم", "پنڈ دادن خان", "سوہاوہ", "دینہ"]
               }
             ]
           },
           {
-            "name": "Gujranwala Division",
+            "name": "گوجرانوالہ ڈویژن",
             "districts": [
               {
-                "name": "Gujranwala District",
-                "tehsils": ["Gujranwala City", "Gujranwala Cantt", "Kamoke", "Nowshera Virkan", "Wazirabad"]
+                "name": "ضلع گوجرانوالہ",
+                "tehsils": ["گوجرانوالہ سٹی", "گوجرانوالہ کینٹ", "کاموکے", "نوشہرہ ورکاں", "وزیرآباد"]
               },
               {
-                "name": "Gujrat District",
-                "tehsils": ["Gujrat", "Kharian", "Sarai Alamgir"]
+                "name": "ضلع گجرات",
+                "tehsils": ["گجرات", "کھاریاں", "سرائے عالمگیر"]
               },
               {
-                "name": "Hafizabad District",
-                "tehsils": ["Hafizabad", "Pindi Bhattian"]
+                "name": "ضلع حافظ آباد",
+                "tehsils": ["حافظ آباد", "پنڈی بھٹیاں"]
               },
               {
-                "name": "Mandi Bahauddin District",
-                "tehsils": ["Mandi Bahauddin", "Malakwal", "Phalia"]
+                "name": "ضلع منڈی بہاؤالدین",
+                "tehsils": ["منڈی بہاؤالدین", "ملکوال", "پھالیہ"]
               },
               {
-                "name": "Narowal District",
-                "tehsils": ["Narowal", "Shakargarh", "Zafarwal"]
+                "name": "ضلع نارووال",
+                "tehsils": ["نارووال", "شکرگڑھ", "ظفر وال"]
               },
               {
-                "name": "Sialkot District",
-                "tehsils": ["Sialkot", "Daska", "Pasrur", "Sambrial"]
+                "name": "ضلع سیالکوٹ",
+                "tehsils": ["سیالکوٹ", "ڈسکہ", "پسرور", "سمبڑیال"]
               }
             ]
           },
           {
-            "name": "Faisalabad Division",
+            "name": "فیصل آباد ڈویژن",
             "districts": [
               {
-                "name": "Faisalabad District",
-                "tehsils": ["Faisalabad City", "Faisalabad Sadr", "Chak Jhumra", "Jaranwala", "Samundri", "Tandlianwala"]
+                "name": "ضلع فیصل آباد",
+                "tehsils": ["فیصل آباد سٹی", "فیصل آباد صدر", "چک جھمرہ", "جرانوالہ", "سمندری", "تاندلیانوالہ"]
               },
               {
-                "name": "Chiniot District",
-                "tehsils": ["Chiniot", "Bhawana", "Lalian"]
+                "name": "ضلع چنیوٹ",
+                "tehsils": ["چنیوٹ", "بھوانہ", "لیلیاں"]
               },
               {
-                "name": "Jhang District",
-                "tehsils": ["Jhang", "Ahmadpur Sial", "Shorkot"]
+                "name": "ضلع جھنگ",
+                "tehsils": ["جھنگ", "احمدپور سیال", "شورکوٹ"]
               },
               {
-                "name": "Toba Tek Singh District",
-                "tehsils": ["Toba Tek Singh", "Gojra", "Kamar Mashani", "Pirmahal"]
+                "name": "ضلع ٹوبہ ٹیک سنگھ",
+                "tehsils": ["ٹوبہ ٹیک سنگھ", "گوجرہ", "کمار مشانی", "پیرمہال"]
               }
             ]
           },
           {
-            "name": "Sahiwal Division",
+            "name": "ساہیوال ڈویژن",
             "districts": [
               {
-                "name": "Sahiwal District",
-                "tehsils": ["Sahiwal", "Chichawatni"]
+                "name": "ضلع ساہیوال",
+                "tehsils": ["ساہیوال", "چیچہ وطنی"]
               },
               {
-                "name": "Okara District",
-                "tehsils": ["Okara", "Depalpur", "Renala Khurd"]
+                "name": "ضلع اوکاڑہ",
+                "tehsils": ["اوکاڑہ", "ڈیپالپور", "رینالہ خورد"]
               },
               {
-                "name": "Pakpattan District",
-                "tehsils": ["Pakpattan", "Arifwala"]
+                "name": "ضلع پاکپتن",
+                "tehsils": ["پاکپتن", "عارف والا"]
               }
             ]
           },
           {
-            "name": "Multan Division",
+            "name": "ملتان ڈویژن",
             "districts": [
               {
-                "name": "Multan District",
-                "tehsils": ["Multan City", "Multan Sadr", "Jalalpur Pirwala", "Shujabad"]
+                "name": "ضلع ملتان",
+                "tehsils": ["ملتان سٹی", "ملتان صدر", "جلالپور پیروالا", "شجاع آباد"]
               },
               {
-                "name": "Khanewal District",
-                "tehsils": ["Khanewal", "Jahanian", "Kabirwala", "Mian Channu"]
+                "name": "ضلع خانیوال",
+                "tehsils": ["خانیوال", "جہانیاں", "کبیروالا", "میان چنوں"]
               },
               {
-                "name": "Lodhran District",
-                "tehsils": ["Lodhran", "Dunyapur", "Kahror Pacca"]
+                "name": "ضلع لودھراں",
+                "tehsils": ["لودھراں", "دنیاپور", "کہرور پکا"]
               },
               {
-                "name": "Vehari District",
-                "tehsils": ["Vehari", "Burewala", "Mailsi"]
+                "name": "ضلع وہاڑی",
+                "tehsils": ["وہاڑی", "بورے والا", "میلسی"]
               }
             ]
           },
           {
-            "name": "Dera Ghazi Khan Division",
+            "name": "ڈیرہ غازی خان ڈویژن",
             "districts": [
               {
-                "name": "Dera Ghazi Khan District",
-                "tehsils": ["Dera Ghazi Khan", "Kot Chutta", "Taunsa", "De-Excluded Area"]
+                "name": "ضلع ڈیرہ غازی خان",
+                "tehsils": ["ڈیرہ غازی خان", "کوٹ چھٹہ", "تونسہ", "ڈی ایکسکلوڈڈ ایریا"]
               },
               {
-                "name": "Layyah District",
-                "tehsils": ["Layyah", "Chobara", "Karor Lal Esan"]
+                "name": "ضلع لیہ",
+                "tehsils": ["لیہ", "چوبارا", "کرور لال عیسان"]
               },
               {
-                "name": "Muzaffargarh District",
-                "tehsils": ["Muzaffargarh", "Alipur", "Jatoi", "Kot Addu"]
+                "name": "ضلع مظفر گڑھ",
+                "tehsils": ["مظفر گڑھ", "علی پور", "جتوئی", "کوٹ ادو"]
               },
               {
-                "name": "Rajanpur District",
-                "tehsils": ["Rajanpur", "Jampur", "Rojhan"]
+                "name": "ضلع راجن پور",
+                "tehsils": ["راجن پور", "جمپور", "روجھان"]
               }
             ]
           },
           {
-            "name": "Bahawalpur Division",
+            "name": "بہاولپور ڈویژن",
             "districts": [
               {
-                "name": "Bahawalpur District",
-                "tehsils": ["Bahawalpur City", "Bahawalpur Sadr", "Ahmadpur East", "Hasilpur", "Khairpur Tamewali", "Yazman"]
+                "name": "ضلع بہاولپور",
+                "tehsils": ["بہاولپور سٹی", "بہاولپور صدر", "احمدپور شرقیہ", "حاصل پور", "خیرپور تامیوالی", "یزمان"]
               },
               {
-                "name": "Bahawalnagar District",
-                "tehsils": ["Bahawalnagar", "Chishtian", "Fort Abbas", "Haroonabad", "Minchinabad"]
+                "name": "ضلع بہاولنگر",
+                "tehsils": ["بہاولنگر", "چشتیاں", "فورٹ عباس", "ہارون آباد", "منچن آباد"]
               },
               {
-                "name": "Rahim Yar Khan District",
-                "tehsils": ["Rahim Yar Khan", "Khanpur", "Liaquatpur", "Sadiqabad"]
+                "name": "ضلع رحیم یار خان",
+                "tehsils": ["رحیم یار خان", "خانپور", "لیاقت پور", "صادق آباد"]
               }
             ]
           },
           {
-            "name": "Sargodha Division",
+            "name": "سرگودھا ڈویژن",
             "districts": [
               {
-                "name": "Sargodha District",
-                "tehsils": ["Sargodha", "Bhalwal", "Kot Momin", "Sahiwal", "Shahpur", "Silanwali"]
+                "name": "ضلع سرگودھا",
+                "tehsils": ["سرگودھا", "بھلوال", "کوٹ مومن", "ساہیوال", "شاہ پور", "سیلانوالی"]
               },
               {
-                "name": "Bhakkar District",
-                "tehsils": ["Bhakkar", "Darya Khan", "Kallur Kot", "Mankera"]
+                "name": "ضلع بھکر",
+                "tehsils": ["بھکر", "دریا خان", "کلاور کوٹ", "منکیرہ"]
               },
               {
-                "name": "Khushab District",
-                "tehsils": ["Khushab", "Nurpur", "Quaidabad"]
+                "name": "ضلع خوشاب",
+                "tehsils": ["خوشاب", "نورپور", "قائد آباد"]
               },
               {
-                "name": "Mianwali District",
-                "tehsils": ["Mianwali", "Isakhel", "Piplan"]
+                "name": "ضلع میانوالی",
+                "tehsils": ["میانوالی", "عیسیٰ خیل", "پِیپلن"]
               }
             ]
           }
         ]
       },
       {
-        "name": "Sindh",
+        "name": "سندھ",
         "divisions": [
           {
-            "name": "Karachi Division",
+            "name": "کراچی ڈویژن",
             "districts": [
               {
-                "name": "Karachi Central District",
-                "tehsils": ["Liaquatabad", "Nazimabad", "Gulberg", "New Karachi", "North Nazimabad", "FB Area", "Gulshan-e-Iqbal"]
+                "name": "ضلع کراچی سنٹرل",
+                "tehsils": ["لیاقت آباد", "نظیم آباد", "گلبرگ", "نیو کراچی", "نارتھ نظیم آباد", "ایف بی ایریا", "گلشن اقبال"]
               },
               {
-                "name": "Karachi East District",
-                "tehsils": ["Ferozabad", "Gulshan-e-Iqbal", "Jamshed Quarters"]
+                "name": "ضلع کراچی ایسٹ",
+                "tehsils": ["فیروز آباد", "گلشن اقبال", "جمشید کوارٹرز"]
               },
               {
-                "name": "Karachi South District",
-                "tehsils": ["Cantonment", "Civil Line", "Garden", "Lyari", "Saddar", "Aram Bagh"]
+                "name": "ضلع کراچی ساؤتھ",
+                "tehsils": ["کینٹ", "سول لائن", "گارڈن", "لیاری", "صدر", "آرام باغ"]
               },
               {
-                "name": "Karachi West District",
-                "tehsils": ["Baldia", "Harbour", "Mauripur", "Mominabad", "Orangi", "SITE"]
+                "name": "ضلع کراچی ویسٹ",
+                "tehsils": ["بلدیہ", "ہاربر", "موری پور", "مومین آباد", "اورنگی", "سائٹ"]
               },
               {
-                "name": "Korangi District",
-                "tehsils": ["Korangi", "Landhi", "Model Colony", "Shah Faisal"]
+                "name": "ضلع کورنگی",
+                "tehsils": ["کورنگی", "لانڈھی", "ماڈل کالونی", "شاہ فیصل"]
               },
               {
-                "name": "Keamari District",
-                "tehsils": ["Keamari", "Mauripur", "Baldia", "Harbour", "SITE"]
+                "name": "ضلع کیماڑی",
+                "tehsils": ["کیماڑی", "موری پور", "بلدیہ", "ہاربر", "سائٹ"]
               },
               {
-                "name": "Malir District",
-                "tehsils": ["Malir", "Gadap", "Murad Memon", "Hub"]
+                "name": "ضلع ملیر",
+                "tehsils": ["ملیر", "گڈاپ", "مراد میمن", "حب"]
               }
             ]
           },
           {
-            "name": "Hyderabad Division",
+            "name": "حیدرآباد ڈویژن",
             "districts": [
               {
-                "name": "Hyderabad District",
-                "tehsils": ["Hyderabad City", "Hyderabad Rural", "Latifabad", "Qasimabad"]
+                "name": "ضلع حیدرآباد",
+                "tehsils": ["حیدرآباد سٹی", "حیدرآباد رورل", "لطیف آباد", "قاسم آباد"]
               },
               {
-                "name": "Badin District",
-                "tehsils": ["Badin", "Golarchi", "Matli", "Shaheed Fazil Rahu", "Tando Bago"]
+                "name": "ضلع بدین",
+                "tehsils": ["بدین", "گولارچی", "ماٹلی", "شہید فضل راحو", "ٹنڈو باغو"]
               },
               {
-                "name": "Dadu District",
-                "tehsils": ["Dadu", "Johi", "Khairpur Nathan Shah", "Mehar", "K.N.Shah"]
+                "name": "ضلع دادو",
+                "tehsils": ["دادو", "جوہی", "خیرپور ناتھن شاہ", "مہر", "کے این شاہ"]
               },
               {
-                "name": "Jamshoro District",
-                "tehsils": ["Jamshoro", "Kotri", "Thana Bulla Khan", "Sehwan"]
+                "name": "ضلع جامشورو",
+                "tehsils": ["جامشورو", "کوٹری", "ٹھانہ بولا خان", "سیہون"]
               },
               {
-                "name": "Matiari District",
-                "tehsils": ["Matiari", "Hala", "Saeedabad"]
+                "name": "ضلع مٹیاری",
+                "tehsils": ["مٹیاری", "ہالا", "سعید آباد"]
               },
               {
-                "name": "Sujawal District",
-                "tehsils": ["Sujawal", "Jati", "Kharo Chan", "Shah Bander"]
+                "name": "ضلع سجاول",
+                "tehsils": ["سجاول", "جاتی", "کھارو چان", "شاہ بندر"]
               },
               {
-                "name": "Tando Allahyar District",
-                "tehsils": ["Tando Allahyar", "Chamber", "Jhando Mari"]
+                "name": "ضلع ٹنڈو اللہ یار",
+                "tehsils": ["ٹنڈو اللہ یار", "چیمبر", "جھانڈو ماری"]
               },
               {
-                "name": "Tando Muhammad Khan District",
-                "tehsils": ["Tando Muhammad Khan", "Bulri Shah Karim"]
+                "name": "ضلع ٹنڈو محمد خان",
+                "tehsils": ["ٹنڈو محمد خان", "بلڑی شاہ کریم"]
               },
               {
-                "name": "Thatta District",
-                "tehsils": ["Thatta", "Ghorabari", "Keti Bundar", "Mirpur Bathoro", "Mirpur Sakro"]
+                "name": "ضلع ٹھٹہ",
+                "tehsils": ["ٹھٹہ", "گھورا باری", "کیٹی بندر", "میرپور بٹھورو", "میرپور ساکرو"]
               }
             ]
           },
           {
-            "name": "Sukkur Division",
+            "name": "سکھر ڈویژن",
             "districts": [
               {
-                "name": "Sukkur District",
-                "tehsils": ["Sukkur", "Pano Aqil", "Rohri", "Salehpat"]
+                "name": "ضلع سکھر",
+                "tehsils": ["سکھر", "پانو عاقل", "روہڑی", "صالح پت"]
               },
               {
-                "name": "Ghotki District",
-                "tehsils": ["Ghotki", "Daharki", "Khangarh", "Mirpur Mathelo", "Ubauro"]
+                "name": "ضلع گھوٹکی",
+                "tehsils": ["گھوٹکی", "ڈہرکی", "خانگڑھ", "میرپور ماٹھیلو", "اوبارو"]
               },
               {
-                "name": "Khairpur District",
-                "tehsils": ["Khairpur", "Faiz Ganj", "Gambat", "Kot Diji", "Mirwah", "Nara", "Sobho Dero"]
+                "name": "ضلع خیرپور",
+                "tehsils": ["خیرپور", "فیض گنج", "گمبٹ", "کوٹ ڈیجی", "میرواہ", "نارا", "سوبھو ڈیرو"]
               },
               {
-                "name": "Naushahro Feroze District",
-                "tehsils": ["Naushahro Feroze", "Bhiria", "Moro", "Kandiaro"]
+                "name": "ضلع نوشہرو فیروز",
+                "tehsils": ["نوشہرو فیروز", "بھیریا", "مورو", "کنڈیارو"]
               }
             ]
           },
           {
-            "name": "Mirpur Khas Division",
+            "name": "میرپور خاص ڈویژن",
             "districts": [
               {
-                "name": "Mirpur Khas District",
-                "tehsils": ["Mirpur Khas", "Digri", "Hussain Bux Mari", "Jhuddo", "Kot Ghulam Muhammad", "Shujabad"]
+                "name": "ضلع میرپور خاص",
+                "tehsils": ["میرپور خاص", "ڈیگری", "حسین بخش ماری", "جھڈو", "کوٹ غلام محمد", "شجاع آباد"]
               },
               {
-                "name": "Sanghar District",
-                "tehsils": ["Sanghar", "Jam Nawaz Ali", "Khipro", "Shahdadpur", "Sinjhoro", "Tando Adam"]
+                "name": "ضلع سانگھڑ",
+                "tehsils": ["سانگھڑ", "جام نواز علی", "کھپرو", "شہدادپور", "سنجھورو", "ٹنڈو آدم"]
               },
               {
-                "name": "Tharparkar District",
-                "tehsils": ["Mithi", "Chachro", "Dahli", "Diplo", "Islamkot", "Kaloi", "Nangarparkar"]
+                "name": "ضلع تھرپارکر",
+                "tehsils": ["مِٹھی", "چاچڑو", "ڈاہلی", "ڈپلو", "اسلام کوٹ", "کالوئی", "ننگرپارکر"]
               },
               {
-                "name": "Umerkot District",
-                "tehsils": ["Umerkot", "Kunri", "Pithoro", "Samaro"]
+                "name": "ضلع عمرکوٹ",
+                "tehsils": ["عمرکوٹ", "کُنڑی", "پِتھورو", "سامارو"]
               }
             ]
           },
           {
-            "name": "Larkana Division",
+            "name": "لاڑکانہ ڈویژن",
             "districts": [
               {
-                "name": "Larkana District",
-                "tehsils": ["Larkana", "Bakrani", "Dokri", "Rato Dero"]
+                "name": "ضلع لاڑکانہ",
+                "tehsils": ["لاڑکانہ", "بکڑانی", "ڈوکری", "رتو ڈیرو"]
               },
               {
-                "name": "Jacobabad District",
-                "tehsils": ["Jacobabad", "Garhi Khairo", "Thul"]
+                "name": "ضلع جیکب آباد",
+                "tehsils": ["جیکب آباد", "گڑھی کھیرو", "ٹھل"]
               },
               {
-                "name": "Kambar Shahdadkot District",
-                "tehsils": ["Kambar", "Miro Khan", "Nasirabad", "Qubo Saeed Khan", "Shahdadkot", "Sijawal Junejo", "Warah"]
+                "name": "ضلع کamber شہدادکوٹ",
+                "tehsils": ["کامبر", "میرو خان", "نصیر آباد", "قبو سعید خان", "شہدادکوٹ", "سجاول جونیجو", "وارہ"]
               },
               {
-                "name": "Kashmore District",
-                "tehsils": ["Kashmore", "Kandhkot", "Tangwani"]
+                "name": "ضلع کشمور",
+                "tehsils": ["کشمور", "کندھکوٹ", "تنگوانی"]
               },
               {
-                "name": "Shikarpur District",
-                "tehsils": ["Shikarpur", "Garhi Yasin", "Khanpur", "Lakhi Ghulam Shah"]
+                "name": "ضلع شکارپور",
+                "tehsils": ["شکارپور", "گڑھی یاسین", "خانپور", "لاکھی غلام شاہ"]
               }
             ]
           },
           {
-            "name": "Shaheed Benazirabad Division",
+            "name": "شہید بینظیرآباد ڈویژن",
             "districts": [
               {
-                "name": "Shaheed Benazirabad District (Nawabshah)",
-                "tehsils": ["Nawabshah", "Daulatpur", "Qazi Ahmed", "Sakrand", "Daur"]
+                "name": "ضلع شہید بینظیرآباد (نوابشاہ)",
+                "tehsils": ["نوابشاہ", "دولت پور", "قاضی احمد", "سکرنڈ", "داؤر"]
               },
               {
-                "name": "Sanghar District",
-                "tehsils": ["Sanghar", "Jam Nawaz Ali", "Khipro", "Shahdadpur", "Sinjhoro", "Tando Adam"]
+                "name": "ضلع سانگھڑ",
+                "tehsils": ["سانگھڑ", "جام نواز علی", "کھپرو", "شہدادپور", "سنجھورو", "ٹنڈو آدم"]
               }
             ]
           }
         ]
       },
       {
-        "name": "Khyber Pakhtunkhwa",
+        "name": "خیبر پختونخوا",
         "divisions": [
           {
-            "name": "Peshawar Division",
+            "name": "پشاور ڈویژن",
             "districts": [
               {
-                "name": "Peshawar District",
-                "tehsils": ["Peshawar", "Charsadda", "Shabqadar"]
+                "name": "ضلع پشاور",
+                "tehsils": ["پشاور", "چارسدہ", "شبقادر"]
               },
               {
-                "name": "Charsadda District",
-                "tehsils": ["Charsadda", "Tangi", "Shabqadar"]
+                "name": "ضلع چارسدہ",
+                "tehsils": ["چارسدہ", "تنگی", "شبقادر"]
               },
               {
-                "name": "Nowshera District",
-                "tehsils": ["Nowshera", "Jehangira", "Pabbi"]
+                "name": "ضلع نوشہرہ",
+                "tehsils": ["نوشہرہ", "جہانگیرا", "پبی"]
               }
             ]
           },
           {
-            "name": "Mardan Division",
+            "name": "مردان ڈویژن",
             "districts": [
               {
-                "name": "Mardan District",
-                "tehsils": ["Mardan", "Takht Bhai", "Katlang"]
+                "name": "ضلع مردان",
+                "tehsils": ["مردان", "تخت بھائی", "کٹلنگ"]
               },
               {
-                "name": "Swabi District",
-                "tehsils": ["Swabi", "Lahor", "Topi", "Razzar"]
+                "name": "ضلع صوابی",
+                "tehsils": ["صوابی", "لاہور", "ٹوپی", "رضار"]
               }
             ]
           },
           {
-            "name": "Malakand Division",
+            "name": "مالاکنڈ ڈویژن",
             "districts": [
               {
-                "name": "Malakand District",
-                "tehsils": ["Dargai", "Batkhela", "Chakdara"]
+                "name": "ضلع مالاکنڈ",
+                "tehsils": ["درگئی", "بٹ خیلہ", "چکدرہ"]
               },
               {
-                "name": "Lower Dir District",
-                "tehsils": ["Timergara", "Adenzai", "Lal Qila", "Samarbagh", "Munda"]
+                "name": "ضلع زیریں دیر",
+                "tehsils": ["ٹمرگرہ", "ادنزئی", "لال قلعہ", "معمار باغ", "منڈا"]
               },
               {
-                "name": "Upper Dir District",
-                "tehsils": ["Dir", "Wari", "Barawal", "Khal", "Sharikot"]
+                "name": "ضلع بالائی دیر",
+                "tehsils": ["دیر", "واری", "باراوال", "خال", "شاری کوٹ"]
               },
               {
-                "name": "Bajaur District",
-                "tehsils": ["Khar", "Nawagai", "Mamund", "Salarzai", "Utmankhel"]
+                "name": "ضلع باجوڑ",
+                "tehsils": ["خار", "نواگئی", "مموند", "سالارزئی", "اوتھمان خیل"]
               },
               {
-                "name": "Swat District",
-                "tehsils": ["Mingora", "Barikot", "Babuzai", "Matta", "Khwazakhela", "Kabal"]
+                "name": "ضلع سوات",
+                "tehsils": ["مینگورہ", "باری کوٹ", "بابوزئی", "مٹہ", "خوازہ خیلہ", "کبل"]
               },
               {
-                "name": "Shangla District",
-                "tehsils": ["Alpuri", "Besham", "Chakesar", "Martung", "Purana"]
+                "name": "ضلع شانگلہ",
+                "tehsils": ["الپوری", "بشام", "چکیسر", "مارٹنگ", "پرانا"]
               },
               {
-                "name": "Lower Chitral District",
-                "tehsils": ["Chitral", "Mastuj", "Lotkoh", "Torkhow"]
+                "name": "ضلع زیریں چترال",
+                "tehsils": ["چترال", "مستوج", "لوٹکوہ", "تورخو"]
               },
               {
-                "name": "Upper Chitral District",
-                "tehsils": ["Booni", "Mulkhow", "Laspur", "Shoghore", "Torkhow"]
+                "name": "ضلع بالائی چترال",
+                "tehsils": ["بونی", "ملخو", "لاسپور", "شوغور", "تورخو"]
               }
             ]
           },
           {
-            "name": "Hazara Division",
+            "name": "ہزارہ ڈویژن",
             "districts": [
               {
-                "name": "Abbottabad District",
-                "tehsils": ["Abbottabad", "Havelian", "Sherwan", "Lora"]
+                "name": "ضلع ایبٹ آباد",
+                "tehsils": ["ایبٹ آباد", "ہویلیاں", "شیروان", "لورا"]
               },
               {
-                "name": "Haripur District",
-                "tehsils": ["Haripur", "Ghazi", "Khanpur"]
+                "name": "ضلع ہری پور",
+                "tehsils": ["ہری پور", "غازی", "خانپور"]
               },
               {
-                "name": "Mansehra District",
-                "tehsils": ["Mansehra", "Bala Kot", "Oghi", "Darband"]
+                "name": "ضلع مانسہرہ",
+                "tehsils": ["مانسہرہ", "بالا کوٹ", "اوگی", "دربند"]
               },
               {
-                "name": "Batagram District",
-                "tehsils": ["Batagram", "Allai", "Bana"]
+                "name": "ضلع بٹگرام",
+                "tehsils": ["بٹگرام", "الائی", "بانا"]
               },
               {
-                "name": "Tor Ghar District",
-                "tehsils": ["Judba", "Khander"]
+                "name": "ضلع تور غر",
+                "tehsils": ["جڈبا", "خاندر"]
               },
               {
-                "name": "Kohistan District",
-                "tehsils": ["Dassu", "Pattan", "Palas"]
+                "name": "ضلع کوہستان",
+                "tehsils": ["داسو", "پٹن", "پلاس"]
               },
               {
-                "name": "Lower Kohistan District",
-                "tehsils": ["Kolai", "Pattan"]
+                "name": "ضلع زیریں کوہستان",
+                "tehsils": ["کولائی", "پٹن"]
               },
               {
-                "name": "Upper Kohistan District",
-                "tehsils": ["Dassu", "Kandia"]
+                "name": "ضلع بالائی کوہستان",
+                "tehsils": ["داسو", "کندیا"]
               }
             ]
           },
           {
-            "name": "Kohat Division",
+            "name": "کوہاٹ ڈویژن",
             "districts": [
               {
-                "name": "Kohat District",
-                "tehsils": ["Kohat", "Lachi", "Gumbat", "Dara Adam Khel"]
+                "name": "ضلع کوہاٹ",
+                "tehsils": ["کوہاٹ", "لاچی", "گمبٹ", "ڈیرہ آدم خیل"]
               },
               {
-                "name": "Karak District",
-                "tehsils": ["Karak", "Banda Daud Shah", "Takht-e-Nasrati"]
+                "name": "ضلع کرک",
+                "tehsils": ["کرک", "بانڈہ داؤد شاہ", "تخت ناصرتی"]
               },
               {
-                "name": "Hangu District",
-                "tehsils": ["Hangu", "Tall"]
+                "name": "ضلع ہنگو",
+                "tehsils": ["ہنگو", "ٹل"]
               },
               {
-                "name": "Kurram District",
-                "tehsils": ["Parachinar", "Central Kurram", "Lower Kurram", "Upper Kurram"]
+                "name": "ضلع کرم",
+                "tehsils": ["پڑا چنار", "سنٹرل کرم", "لوئر کرم", "اپپر کرم"]
               },
               {
-                "name": "Orakzai District",
-                "tehsils": ["Kalaya", "Central Orakzai", "Lower Orakzai", "Upper Orakzai"]
+                "name": "ضلع اورکزئی",
+                "tehsils": ["کلایہ", "سنٹرل اورکزئی", "لوئر اورکزئی", "اپپر اورکزئی"]
               }
             ]
           },
           {
-            "name": "Bannu Division",
+            "name": "بنوں ڈویژن",
             "districts": [
               {
-                "name": "Bannu District",
-                "tehsils": ["Bannu", "Domel", "Kakki"]
+                "name": "ضلع بنوں",
+                "tehsils": ["بنوں", "ڈومیل", "ککی"]
               },
               {
-                "name": "Lakki Marwat District",
-                "tehsils": ["Lakki Marwat", "Sara-i-Naurang"]
+                "name": "ضلع لکی مروت",
+                "tehsils": ["لکی مروت", "سرائی نورنگ"]
               },
               {
-                "name": "North Waziristan District",
-                "tehsils": ["Miranshah", "Datta Khel", "Mir Ali", "Razmak", "Shewa"]
+                "name": "ضلع شمالی وزیرستان",
+                "tehsils": ["میران شاہ", "دٹا خیل", "میر علی", "رضماک", "شوا"]
               }
             ]
           },
           {
-            "name": "Dera Ismail Khan Division",
+            "name": "ڈیرہ اسماعیل خان ڈویژن",
             "districts": [
               {
-                "name": "Dera Ismail Khan District",
-                "tehsils": ["Dera Ismail Khan", "Kulachi", "Paharpur", "Paroa"]
+                "name": "ضلع ڈیرہ اسماعیل خان",
+                "tehsils": ["ڈیرہ اسماعیل خان", "کلاچی", "پہاڑپور", "پروا"]
               },
               {
-                "name": "Tank District",
-                "tehsils": ["Tank", "Kulachi"]
+                "name": "ضلع ٹانک",
+                "tehsils": ["ٹانک", "کلاچی"]
               },
               {
-                "name": "South Waziristan District",
-                "tehsils": ["Wana", "Ladha", "Sarwakai", "Tiarza"]
+                "name": "ضلع جنوبی وزیرستان",
+                "tehsils": ["وانہ", "لڈہا", "سرواکی", "تیارزہ"]
               }
             ]
           }
         ]
       },
       {
-        "name": "Balochistan",
+        "name": "بلوچستان",
         "divisions": [
           {
-            "name": "Quetta Division",
+            "name": "کوئٹہ ڈویژن",
             "districts": [
               {
-                "name": "Quetta District",
-                "tehsils": ["Quetta", "Chiltan", "Panjpai", "Zarghoon"]
+                "name": "ضلع کوئٹہ",
+                "tehsils": ["کوئٹہ", "چلتن", "پنجپائی", "زرغون"]
               },
               {
-                "name": "Killa Abdullah District",
-                "tehsils": ["Chaman", "Dobandi", "Gulistan", "Killa Abdullah"]
+                "name": "ضلع قلعہ عبداللہ",
+                "tehsils": ["چمن", "ڈوبندی", "گلستان", "قلعہ عبداللہ"]
               },
               {
-                "name": "Pishin District",
-                "tehsils": ["Pishin", "Barshore", "Karezat", "Saranan"]
+                "name": "ضلع پشین",
+                "tehsils": ["پشین", "بارشور", "کرزت", "سرانان"]
               }
             ]
           },
           {
-            "name": "Kalat Division",
+            "name": "قلات ڈویژن",
             "districts": [
               {
-                "name": "Kalat District",
-                "tehsils": ["Kalat", "Gazgz", "Manguchar", "Surab"]
+                "name": "ضلع قلات",
+                "tehsils": ["قلات", "گزگ", "منگوچر", "سوراب"]
               },
               {
-                "name": "Khuzdar District",
-                "tehsils": ["Khuzdar", "Moola", "Wadh", "Zeeri"]
+                "name": "ضلع خضدار",
+                "tehsils": ["خضدار", "مولا", "وادھ", "زیری"]
               },
               {
-                "name": "Mastung District",
-                "tehsils": ["Mastung", "Dashed", "Kirdgap", "Khad Kucha"]
+                "name": "ضلع مستونگ",
+                "tehsils": ["مستونگ", "داشت", "کردگاپ", "خاد کوچہ"]
               },
               {
-                "name": "Lasbela District",
-                "tehsils": ["Uthal", "Bela", "Dureji", "Hub", "Kanraj", "Lakhra", "Liari", "Sonmiani"]
+                "name": "ضلع لسبیلہ",
+                "tehsils": ["اوتھل", "بیلا", "دورئیجی", "حب", "کنڑاج", "لکھڑا", "لیاری", "سونمیانی"]
               },
               {
-                "name": "Awaran District",
-                "tehsils": ["Awaran", "Gishkaur", "Jhal Jhao", "Mashkai"]
+                "name": "ضلع آواران",
+                "tehsils": ["آواران", "گشکور", "جھل جھاؤ", "مشکی"]
               },
               {
-                "name": "Kharan District",
-                "tehsils": ["Kharan", "Gwash", "Nag", "Sarab"]
+                "name": "ضلع خاران",
+                "tehsils": ["خاران", "گوش", "ناگ", "ساراب"]
               },
               {
-                "name": "Washuk District",
-                "tehsils": ["Washuk", "Mashkhel", "Shahidi"]
+                "name": "ضلع واشک",
+                "tehsils": ["واشک", "مشکیل", "شاہیدی"]
               }
             ]
           },
           {
-            "name": "Makran Division",
+            "name": "مکران ڈویژن",
             "districts": [
               {
-                "name": "Kech (Turbat) District",
-                "tehsils": ["Turbat", "Buleda", "Dasht", "Tump", "Mand"]
+                "name": "ضلع کیچ (تربت)",
+                "tehsils": ["تربت", "بولیدہ", "دشت", "ٹمپ", "مند"]
               },
               {
-                "name": "Gwadar District",
-                "tehsils": ["Gwadar", "Jiwani", "Ormara", "Pasni"]
+                "name": "ضلع گوادر",
+                "tehsils": ["گوادر", "جیوانی", "اورماڑہ", "پسنئی"]
               },
               {
-                "name": "Panjgur District",
-                "tehsils": ["Panjgur", "Gichk", "Parome"]
+                "name": "ضلع پنجگور",
+                "tehsils": ["پنجگور", "گشک", "پاروم"]
               }
             ]
           },
           {
-            "name": "Naseerabad Division",
+            "name": "نصیرآباد ڈویژن",
             "districts": [
               {
-                "name": "Naseerabad District",
-                "tehsils": ["Dera Murad Jamali", "Chattar", "Tambo", "Sanjavi"]
+                "name": "ضلع نصیرآباد",
+                "tehsils": ["ڈیرہ مراد جمالی", "چٹّر", "ٹمبو", "سنجاوی"]
               },
               {
-                "name": "Jafarabad District",
-                "tehsils": ["Dera Allah Yar", "Gandakha", "Jhat Pat", "Usta Muhammad"]
+                "name": "ضلع جعفرآباد",
+                "tehsils": ["ڈیرہ اللہ یار", "گنداخہ", "جھٹ پٹ", "اُستہ محمد"]
               },
               {
-                "name": "Jhal Magsi District",
-                "tehsils": ["Jhal Magsi", "Gandawa", "Mirpur"]
+                "name": "ضلع جھل مگسی",
+                "tehsils": ["جھل مگسی", "گنداوہ", "میرپور"]
               }
             ]
           },
           {
-            "name": "Sibi Division",
+            "name": "سبی ڈویژن",
             "districts": [
               {
-                "name": "Sibi District",
-                "tehsils": ["Sibi", "Kotri", "Lehri", "Sangan"]
+                "name": "ضلع سبی",
+                "tehsils": ["سبی", "کوٹری", "لہری", "سنگن"]
               },
               {
-                "name": "Harnai District",
-                "tehsils": ["Harnai", "Khost", "Shahrag"]
+                "name": "ضلع ہرنائی",
+                "tehsils": ["ہرنائی", "خوست", "شہرگ"]
               },
               {
-                "name": "Ziarat District",
-                "tehsils": ["Ziarat", "Sinjawi", "Sanjawi"]
+                "name": "ضلع زیارت",
+                "tehsils": ["زیارت", "سنجاوی", "سنجاوی"]
               },
               {
-                "name": "Kohlu District",
-                "tehsils": ["Kohlu", "Kahan", "Mawand", "Tamarind"]
+                "name": "ضلع کوہلو",
+                "tehsils": ["کوہلو", "کاہان", "ماوند", "تمارینڈ"]
               },
               {
-                "name": "Dera Bugti District",
-                "tehsils": ["Dera Bugti", "Phelawagh", "Sui", "Baiker"]
+                "name": "ضلع ڈیرہ بگٹی",
+                "tehsils": ["ڈیرہ بگٹی", "پھیلاواغ", "سوئی", "بیکر"]
               }
             ]
           },
           {
-            "name": "Zhob Division",
+            "name": "ژوب ڈویژن",
             "districts": [
               {
-                "name": "Zhob District",
-                "tehsils": ["Zhob", "Kakar Khurasan", "Sambaza", "Shamozai"]
+                "name": "ضلع ژوب",
+                "tehsils": ["ژوب", "کاکڑ خوراسان", "سمبازہ", "شاموزئی"]
               },
               {
-                "name": "Sherani District",
-                "tehsils": ["Sherani"]
+                "name": "ضلع شیرانی",
+                "tehsils": ["شیرانی"]
               },
               {
-                "name": "Killa Saifullah District",
-                "tehsils": ["Killa Saifullah", "Loiband", "Muslim Bagh"]
+                "name": "ضلع قلعہ سیف اللہ",
+                "tehsils": ["قلعہ سیف اللہ", "لوئی بند", "مسلم باغ"]
               },
               {
-                "name": "Musakhel District",
-                "tehsils": ["Musakhel", "Kingri", "Dragon", "Vihowa"]
+                "name": "ضلع موسیٰ خیل",
+                "tehsils": ["موسیٰ خیل", "کنگری", "ڈریگن", "وہووا"]
               },
               {
-                "name": "Loralai District",
-                "tehsils": ["Loralai", "Bori", "Duki", "Mekhtar"]
+                "name": "ضلع لورالائی",
+                "tehsils": ["لورالائی", "بوری", "ڈوکی", "مختر"]
               },
               {
-                "name": "Barkhan District",
-                "tehsils": ["Barkhan", "Hosri", "Rakhni"]
+                "name": "ضلع بارخان",
+                "tehsils": ["بارخان", "ہوسری", "رکھنی"]
               }
             ]
           },
           {
-            "name": "Rakhshan Division",
+            "name": "رخشان ڈویژن",
             "districts": [
               {
-                "name": "Chagai District",
-                "tehsils": ["Dalbandin", "Nokundi", "Taftan"]
+                "name": "ضلع چاغی",
+                "tehsils": ["دالبندین", "نوکندی", "تفتان"]
               },
               {
-                "name": "Nushki District",
-                "tehsils": ["Nushki", "Chagai", "Qamar Din Karez"]
+                "name": "ضلع نوشکی",
+                "tehsils": ["نوشکی", "چاغی", "قمر دین کاریز"]
               },
               {
-                "name": "Washuk District",
-                "tehsils": ["Washuk", "Mashkhel", "Shahidi"]
+                "name": "ضلع واشک",
+                "tehsils": ["واشک", "مشکیل", "شاہیدی"]
               }
             ]
           }
         ]
       },
       {
-        "name": "Islamabad Capital Territory",
+        "name": "اسلام آباد دارالحکومت علاقہ",
         "divisions": [],
         "districts": [
           {
-            "name": "Islamabad District",
-            "tehsils": ["Islamabad", "Tarnol", "Koral", "Sihala", "Shah Allah Ditta"]
+            "name": "ضلع اسلام آباد",
+            "tehsils": ["اسلام آباد", "ٹرنول", "کورال", "سیہالہ", "شاہ اللہ دتہ"]
           }
         ]
       },
       {
-        "name": "Azad Jammu & Kashmir",
+        "name": "آزاد کشمیر",
         "divisions": [
           {
-            "name": "Mirpur Division",
+            "name": "میرپور ڈویژن",
             "districts": [
               {
-                "name": "Mirpur District",
-                "tehsils": ["Mirpur", "Dadyal"]
+                "name": "ضلع میرپور",
+                "tehsils": ["میرپور", "ڈڈیال"]
               },
               {
-                "name": "Bhimber District",
-                "tehsils": ["Bhimber", "Barnala", "Samahni"]
+                "name": "ضلع بھمبر",
+                "tehsils": ["بھمبر", "برنالا", "سمہنی"]
               },
               {
-                "name": "Kotli District",
-                "tehsils": ["Kotli", "Fatehpur Thakiala", "Khuiratta", "Sehnsa"]
+                "name": "ضلع کوٹلی",
+                "tehsils": ["کوٹلی", "فتح پور ٹھکیالا", "کھوئی رٹہ", "سہنسہ"]
               }
             ]
           },
           {
-            "name": "Muzaffarabad Division",
+            "name": "مظفرآباد ڈویژن",
             "districts": [
               {
-                "name": "Muzaffarabad District",
-                "tehsils": ["Muzaffarabad", "Patika"]
+                "name": "ضلع مظفرآباد",
+                "tehsils": ["مظفرآباد", "پٹیکہ"]
               },
               {
-                "name": "Hattian Bala District",
-                "tehsils": ["Hattian Bala", "Leepa", "Chikkar"]
+                "name": "ضلع ہٹیاں بالا",
+                "tehsils": ["ہٹیاں بالا", "لیپا", "چھکّر"]
               },
               {
-                "name": "Neelum District",
-                "tehsils": ["Athmuqam", "Sharda"]
+                "name": "ضلع نیلم",
+                "tehsils": ["آتھمقام", "شاردہ"]
               }
             ]
           },
           {
-            "name": "Poonch Division",
+            "name": "پونچھ ڈویژن",
             "districts": [
               {
-                "name": "Poonch District",
-                "tehsils": ["Rawalakot", "Abbaspur", "Hajira"]
+                "name": "ضلع پونچھ",
+                "tehsils": ["راولا کوٹ", "عباس پور", "حاجیڑہ"]
               },
               {
-                "name": "Bagh District",
-                "tehsils": ["Bagh", "Dhariya Batrasi", "Haveli"]
+                "name": "ضلع باغ",
+                "tehsils": ["باغ", "ڈھیریہ بٹراسی", "حویلی"]
               },
               {
-                "name": "Sudhnati District",
-                "tehsils": ["Pallandri", "Bali Am", "Trar Dewan"]
+                "name": "ضلع سدھنوتی",
+                "tehsils": ["پلندری", "بالی آم", "ترار دیوان"]
               }
             ]
           }
         ]
       },
       {
-        "name": "Gilgit-Baltistan",
+        "name": "گلگت بلتستان",
         "divisions": [
           {
-            "name": "Gilgit Division",
+            "name": "گلگت ڈویژن",
             "districts": [
               {
-                "name": "Gilgit District",
-                "tehsils": ["Gilgit", "Juglot", "Naltar"]
+                "name": "ضلع گلگت",
+                "tehsils": ["گلگت", "جگلوٹ", "نلتر"]
               },
               {
-                "name": "Ghanche District",
-                "tehsils": ["Khaplu", "Mashabrum", "Daghoni"]
+                "name": "ضلع گھانچے",
+                "tehsils": ["خپلو", "مشبرم", "ڈاغونی"]
               },
               {
-                "name": "Hunza District",
-                "tehsils": ["Aliabad", "Gojal"]
+                "name": "ضلع ہنزہ",
+                "tehsils": ["علی آباد", "گوجال"]
               },
               {
-                "name": "Nagar District",
-                "tehsils": ["Nagar", "Hispar"]
+                "name": "ضلع نگر",
+                "tehsils": ["نگر", "ہسپر"]
               }
             ]
           },
           {
-            "name": "Baltistan Division",
+            "name": "بلتستان ڈویژن",
             "districts": [
               {
-                "name": "Skardu District",
-                "tehsils": ["Skardu", "Gultari", "Kharmang", "Roundu"]
+                "name": "ضلع سکردو",
+                "tehsils": ["سکردو", "گلتری", "کھرمنگ", "رونڈو"]
               },
               {
-                "name": "Shigar District",
-                "tehsils": ["Shigar", "Askole"]
+                "name": "ضلع شگر",
+                "tehsils": ["شگر", "اسکولے"]
               },
               {
-                "name": "Kharmang District",
-                "tehsils": ["Tolti", "Mashabrum", "Gultari"]
+                "name": "ضلع کھرمنگ",
+                "tehsils": ["ٹولٹی", "مشبرم", "گلتری"]
               },
               {
-                "name": "Ghanche District",
-                "tehsils": ["Khaplu", "Mashabrum", "Daghoni"]
+                "name": "ضلع گھانچے",
+                "tehsils": ["خپلو", "مشبرم", "ڈاغونی"]
               }
             ]
           },
           {
-            "name": "Diamer Division",
+            "name": "دیامر ڈویژن",
             "districts": [
               {
-                "name": "Diamer District",
-                "tehsils": ["Chilas", "Darel", "Tangir"]
+                "name": "ضلع دیامر",
+                "tehsils": ["چلاس", "داریل", "تنگر"]
               },
               {
-                "name": "Astore District",
-                "tehsils": ["Astore", "Gorikot", "Chilam"]
+                "name": "ضلع استور",
+                "tehsils": ["استور", "گوری کوٹ", "چلم"]
               }
             ]
           }
