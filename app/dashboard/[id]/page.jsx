@@ -81,7 +81,7 @@ export default function AdmissionForm() {
   // Inline dashed underline
   const Line = ({ value , className }) => (
     <span className={cn(`border-b border-dashed border-blue-800 min-w-[100px] text-center inline-block`, className)}>
-      {value || "———"}
+      {value || ""}
     </span>
   );
 
@@ -153,11 +153,11 @@ export default function AdmissionForm() {
        {/*  date & student signature */}
       <div className="flex justify-between mb-4 text-blue-900 px-3">
         
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 ">
           <span>تاریخ:</span>
           <Line value={student.date} />
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 ">
           <span>دستخط طالب علم :</span>
           <Line value={student.StudentSignature} />
         </div>
@@ -170,7 +170,7 @@ export default function AdmissionForm() {
         </div>
 
         <div className="p-4 space-y-3 text-blue-900">
-          <div className="grid grid-cols-[170px_170px_1fr_1fr] gap-4">
+          <div className="grid grid-col-1  md:grid-cols-[170px_170px_1fr_1fr] gap-4">
           {/* <div className="flex gap-4"> */}
             <div className="flex gap-2 items-center">
               <span>نام:</span>
@@ -192,7 +192,7 @@ export default function AdmissionForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-col-1 md:grid-cols-4 gap-4">
 
 <div className="flex gap-2 items-center">
               <span>گاؤں:</span>
@@ -215,7 +215,7 @@ export default function AdmissionForm() {
            
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-col-1 md:grid-cols-3 gap-4">
             
             
             
@@ -242,9 +242,9 @@ export default function AdmissionForm() {
         <div className="bg-blue-100 border rounded-xl text-blue-900 border-blue-800 text-center font-bold py-1 mx-auto my-1 w-[140px]">
           جدید طلباء کے لئے
         </div>
-        <div className="flex justify-between p-4 space-y-2 text-blue-900">
+        <div className="flex flex-col md:flex-row justify-between p-4 space-y-2 text-blue-900">
           
-          <div className="flex gap-2 items-center">
+          <div className="flex  gap-2 items-center">
             <span>جس مدرسہ کو چھوڑ کر ایا ہے اس کا پتہ :</span>
             <Line value={student.previousSchool} />
           </div>
@@ -254,14 +254,14 @@ export default function AdmissionForm() {
             <Line value={student.lastClass} />
           </div>
         </div>
-        <div className="flex justify-between px-4  text-blue-900">
+        <div className="flex flex-col md:flex-row gap-2 justify-between px-4  text-blue-900">
           
           <div className="flex gap-2 items-center">
             <span> تقدیر:</span>
             <Line value={student?.taqdeer} />
           </div>
 
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 ">
             <span>دستخط وہ مہر ناظم تعلیمات :</span>
             <Line value={student.dastkhata} />
           </div>
@@ -299,7 +299,7 @@ export default function AdmissionForm() {
           سند التحاق
         </div>
 
-        <div className="flex px-3">
+        <div className="flex flex-col md:flex-row px-3">
           <div className="w-[150px] border-2 border-blue-800 rounded-xl">
             <Image
               src="/certificate.png"
@@ -309,18 +309,18 @@ export default function AdmissionForm() {
             />
           </div>
           <div className="p-4 space-y-3 text-blue-900 flex-1">
-             <div className="flex gap-4">
-            <div className="flex gap-2 items-center">
+             <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex gap-2 ">
               <span>تصدیق کی جاتی ہے کہ طالب علم  مسمی :</span>
-              <Line value={student?.affiliationName} />
+              <Line value={student?.name} />
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 ">
               <span>بن :</span>
-              <Line value={student?.affiliationFather} />
+              <Line value={'Juanid Khan'} />
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 my-1">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-1">
 <div className="flex gap-2 items-center">
               <span>گاؤں:</span>
               <Line value={student?.village} />
@@ -342,8 +342,8 @@ export default function AdmissionForm() {
          
 
          
-          <div className="flex gap-4 mr-6 pr-4">
-<div className="flex gap-2 items-center">
+          <div className="flex flex-col md:flex-row gap-4 Md:mr-6 md:pr-4">
+<div className="flex gap-2">
               <span>نے فارم پر کر کے حسب اقرار عہد نامہ درجہ :</span>
               <Line value={student?.class} />
             </div>
@@ -351,16 +351,16 @@ export default function AdmissionForm() {
            <span>میں اس کا داخلہ باقاعدہ مکمل ہوا اور سند التحاق اس کے نام پر جاری ہوا-</span>
           </div>
 
-          <div className="flex justify-between mt-6">
+          <div className="flex flex-col md:flex-row justify-between gap-2 mt-6">
             <div className="flex gap-2 items-center">
               <span>کمرہ نمبر :</span>
               <Line value={student?.room} />
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 ">
              <span>کتب خانہ نمبر :</span>
               <Line value={student?.khata} />
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 ">
              <span>دستخط وہ مہر ناظم تعلیمات :</span>
               <Line value={student?.nazimSignature} />
             </div>

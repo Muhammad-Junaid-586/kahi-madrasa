@@ -43,7 +43,7 @@ const data = {
   navMain: [
     {
       title: "Students",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
