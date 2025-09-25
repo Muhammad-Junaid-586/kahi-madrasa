@@ -6,7 +6,6 @@ import axios from "axios";
 import { pakistanData } from "@/public/assests/data";
 import { useAppContext } from "@/context/AppContext";
 
-
 // شعبے
 const shuabay = [
   "درجہ دورہ حدیث",
@@ -38,14 +37,6 @@ const ahataData = {
   "دارالحافظ": 10,
 };
 
-// function loopingRooms(room){
-//   let rooms = []
-//   for (let i = 1; i <= room; i++) {
-//     rooms.push(i)
-//   }
-//   return rooms
-// }
-
 const taqdeer = [
   { name: "راسب", range: "1 تا 239 نمبر" },
   { name: "مقبول", range: "240 تا 299 نمبر" },
@@ -76,32 +67,30 @@ const InputForm = () => {
     ahataRooms: "",
     taqdeer: "",
     taqdeerRange: "",
+    image: null, // New image field
   });
 
-  const {fetchStudentsData} = useAppContext();
+  const [imagePreview, setImagePreview] = useState(null);
+  const { fetchStudentsData } = useAppContext();
 
-
-  
-  // districts and tehsil\
+  // districts and tehsil
   // Function to extract all districts and their tehsils
-const getAllDistricts = () => {
-  const districts = {};
-  
-  pakistanData.Pakistan.provinces.forEach(province => {
-    province.divisions.forEach(division => {
-      division.districts.forEach(district => {
-        districts[district.name] = district.tehsils;
+  const getAllDistricts = () => {
+    const districts = {};
+    
+    pakistanData.Pakistan.provinces.forEach(province => {
+      province.divisions.forEach(division => {
+        division.districts.forEach(district => {
+          districts[district.name] = district.tehsils;
+        });
       });
     });
-  });
-  
-  return districts;
-};
+    
+    return districts;
+  };
 
-
-const allDistricts = getAllDistricts();
-
-const [tehsils, setTehsils] = useState([]);
+  const allDistricts = getAllDistricts();
+  const [tehsils, setTehsils] = useState([]);
 
   // Update tehsils when district changes
   useEffect(() => {
@@ -113,9 +102,7 @@ const [tehsils, setTehsils] = useState([]);
     }
   }, [formData.district]);
 
-
-  // districts and tehsil
-  // handle input changes
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -133,72 +120,184 @@ const [tehsils, setTehsils] = useState([]);
     }
   };
 
-  function loopingRooms(room){
-  let rooms = []
-  for (let i = 1; i <= room; i++) {
-    rooms.push(i)
+  // Handle image upload
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      // Check file type
+      if (!file.type.startsWith('image/')) {
+        alert('براہ کرم صرف تصویری فائل اپ لوڈ کریں');
+        return;
+      }
+
+      // Check file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        alert('تصویری فائل کا سائز 5MB سے زیادہ نہیں ہونا چاہیے');
+        return;
+      }
+
+      setFormData((prev) => ({
+        ...prev,
+        image: file,
+      }));
+
+      // Create preview
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImagePreview(e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  // Remove image
+  const handleRemoveImage = () => {
+    setFormData((prev) => ({
+      ...prev,
+      image: null,
+    }));
+    setImagePreview(null);
+    // Reset file input
+    const fileInput = document.getElementById('image');
+    if (fileInput) fileInput.value = '';
+  };
+
+  function loopingRooms(room) {
+    let rooms = [];
+    for (let i = 1; i <= room; i++) {
+      rooms.push(i);
+    }
+    return rooms;
   }
-  return rooms
-}
 
   const rooms = formData.ahata ? loopingRooms(ahataData[formData.ahata]) : [];
 
-
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.name || !formData.parent || !formData.contact) {
+      alert('براہ کرم تمام ضروری فیلڈز پر کرنے');
+      return;
+    }
+
     try {
-      const res = await axios.post("/api/student/create", formData)
+      // Create FormData for file upload
+      const submitData = new FormData();
+      
+      // Append all form fields
+      Object.keys(formData).forEach(key => {
+        if (key === 'image' && formData[key]) {
+          submitData.append('image', formData[key]);
+        } else {
+          submitData.append(key, formData[key]);
+        }
+      });
+
+      const res = await axios.post("/api/student/create", submitData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
 
       if (res.data.success) {
-        alert("✅ فارم کامیابی سے جمع ہوگیا")
-        console.log("Saved:", res.data.student)
+        alert("✅ فارم کامیابی سے جمع ہوگیا");
+        console.log("Saved:", res.data.student);
+        
+        // Reset form
         setFormData({
-        name: "",
-        parent: "",
-        village: "",
-        district: "",
-        tehsil: "",
-        cnic: "",
-        contact: "",
-        guardian: "",
-        guardianFather: "",
-        dateOfBirth: "",
-        address: "",
-        room: "",
-        previousSchool: "",
-        lastClass: "",
-        grade: "",
-        ahata: "",
-        taqdeer: "",
-        ahataRooms: "",
-        admissionNo: "",
-      });
-    fetchStudentsData();
-    console.log("data fetch successfully");
-    
+          admissionNo: "",
+          name: "",
+          parent: "",
+          village: "",
+          district: "",
+          tehsil: "",
+          cnic: "",
+          contact: "",
+          guardian: "",
+          guardianFather: "",
+          dateOfBirth: "",
+          address: "",
+          room: "",
+          previousSchool: "",
+          lastClass: "",
+          grade: "",
+          ahata: "",
+          taqdeer: "",
+          ahataRooms: "",
+          image: null,
+        });
+        setImagePreview(null);
+        
+        fetchStudentsData();
+        console.log("Data fetched successfully");
       } else {
-        alert("❌ " + res.data.message)
+        alert("❌ " + res.data.message);
       }
-
-      
-      
     } catch (error) {
-      console.error(error)
-      alert("⚠️ سرور پر مسئلہ ہے")
+      console.error(error);
+      alert("⚠️ سرور پر مسئلہ ہے");
     }
-  }
+  };
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-green-100 to-green-200 ">
       <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8" dir="rtl">
-        <h1 className="text-2xl font-bold text-center mb-6 text-green-700 heading">جامعہ دارالعلوم سراج الاسلام کاہی ہنگو</h1>
-        <h2 className="text-2xl  text-center mb-6 text-green-700 heading">
+        <h1 className="text-2xl font-bold text-center mb-6 text-green-700 heading">
+          جامعہ دارالعلوم سراج الاسلام کاہی ہنگو
+        </h1>
+        <h2 className="text-2xl text-center mb-6 text-green-700 heading">
           داخلہ فارم
-
         </h2>
 
         <form className="space-y-6" onSubmit={handleSubmit}>
-          {/* نام + ولدیت */}
+          {/* تصویر اپ لوڈ */}
+          <div className="flex flex-col items-center mb-6">
+            <label htmlFor="image" className="block mb-3 font-medium text-gray-700 text-lg">
+              تصویر اپ لوڈ کریں
+            </label>
+            
+            {/* Image Preview */}
+            {imagePreview && (
+              <div className="relative mb-4">
+                <img 
+                  src={imagePreview} 
+                  alt="Preview" 
+                  className="w-32 h-32 object-cover rounded-full border-4 border-green-200"
+                />
+                <button
+                  type="button"
+                  onClick={handleRemoveImage}
+                  className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex  justify-center align-center text-center text-sm"
+                >
+                  ×
+                </button>
+              </div>
+            )}
+
+            {/* File Input */}
+            <div className="flex flex-col items-center">
+              <label 
+                htmlFor="image" 
+                className="cursor-pointer bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors"
+              >
+                {formData.image ? 'تصویر تبدیل کریں' : 'تصویر منتخب کریں'}
+              </label>
+              <input
+                type="file"
+                id="image"
+                name="image"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="hidden"
+              />
+              <p className="text-sm text-gray-500 mt-2 heading">
+                جیپی جی، پی این جی یا جی آئی ایف فارمیٹ (زیادہ سے زیادہ سائز: 5MB)
+              </p>
+            </div>
+          </div>
+
+          {/* داخلہ نمبر + مطلوبہ درجہ */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="admissionNo" className="block mb-1 font-medium text-gray-700">
@@ -216,14 +315,13 @@ const [tehsils, setTehsils] = useState([]);
             <div>
               <label htmlFor="grade" className="block mb-1 font-medium text-gray-700">
                 مطلوبہ درجہ یا کلاس
-
               </label>
               <select
                 id="grade"
                 name="grade"
                 value={formData.grade}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none  appearance-none text-sm"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none text-sm"
               >
                 <option value="">انتخاب کریں</option>
                 {shuabay.map((item, index) => (
@@ -234,6 +332,7 @@ const [tehsils, setTehsils] = useState([]);
               </select>
             </div>
           </div>
+
           {/* نام + ولدیت */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
@@ -247,6 +346,7 @@ const [tehsils, setTehsils] = useState([]);
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+                required
               />
             </div>
             <div>
@@ -260,6 +360,7 @@ const [tehsils, setTehsils] = useState([]);
                 value={formData.parent}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+                required
               />
             </div>
           </div>
@@ -352,6 +453,7 @@ const [tehsils, setTehsils] = useState([]);
                 onChange={handleChange}
                 placeholder="0000-0000000"
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+                required
               />
             </div>
             <div>
@@ -411,66 +513,49 @@ const [tehsils, setTehsils] = useState([]);
           </div>
 
           {/* احاطہ منتخب کریں + کمرے */}
-         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="ahata" className="block mb-1 font-medium text-gray-700">
+                احاطہ منتخب کریں
+              </label>
+              <select
+                id="ahata"
+                name="ahata"
+                value={formData.ahata}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
+              >
+                <option value="">انتخاب کریں</option>
+                {Object.keys(ahataData).map((ahata, i) => (
+                  <option key={i} value={ahata}>{ahata}</option>
+                ))}
+              </select>
+            </div>
 
-  {/* Ahata Selection */}
-  <div>
-    <label htmlFor="ahata" className="block mb-1 font-medium text-gray-700">
-      احاطہ منتخب کریں
-    </label>
-    <select
-      id="ahata"
-      name="ahata"
-      value={formData.ahata}
-      onChange={handleChange}
-      className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
-    >
-      <option value="">انتخاب کریں</option>
-      {Object.keys(ahataData).map((ahata, i) => (
-        <option key={i} value={ahata}>{ahata}</option>
-      ))}
-    </select>
-  </div>
-
-  {/* Room Selection */}
-  <div>
-    <label htmlFor="room" className="block mb-1 font-medium text-gray-700">
-      کمرہ نمبر
-    </label>
-    <select
-      id="room"
-      name="room"
-      value={formData.room}
-      onChange={handleChange}
-      className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
-    >
-      <option value="">انتخاب کریں</option>
-      {rooms.map((room, i) => (
-        <option key={i} value={room}>{room}</option>
-      ))}
-    </select>
-  </div>
-
-</div>
-
- <hr className="h-[2px] bg-gray-400 border-0 rounded" />
-      <h3 className="text-2xl  text-center text-gray-700  mb-4 heading">جدید طلبہ کے لیے</h3>
-
-          {/* سابقہ مدرسہ */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
-            {/* <div>
-              <label htmlFor="room" className="block mb-1 font-medium text-gray-700 ">
+            <div>
+              <label htmlFor="room" className="block mb-1 font-medium text-gray-700">
                 کمرہ نمبر
               </label>
-              <input
-                type="text"
+              <select
                 id="room"
                 name="room"
                 value={formData.room}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
-              />
-            </div> */}
+              >
+                <option value="">انتخاب کریں</option>
+                {rooms.map((room, i) => (
+                  <option key={i} value={room}>{room}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <hr className="h-[2px] bg-gray-400 border-0 rounded" />
+          <h3 className="text-2xl text-center text-gray-700 mb-4 heading">جدید طلبہ کے لیے</h3>
+
+          {/* سابقہ مدرسہ */}
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
             <div>
               <label htmlFor="previousSchool" className="block mb-1 font-medium text-gray-700">
                 سابقہ مدرسہ (نام اور پتہ)
@@ -492,20 +577,12 @@ const [tehsils, setTehsils] = useState([]);
               <label htmlFor="lastClass" className="block mb-1 font-medium text-gray-700">
                 اخری پاس کردہ درجہ/کلاس
               </label>
-              {/* <input
-                type="text"
+              <select
                 id="lastClass"
                 name="lastClass"
                 value={formData.lastClass}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-400 focus:outline-none"
-              /> */}
-               <select
-                id="lastClass"
-                name="lastClass"
-                value={formData.lastClass}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none  appearance-none text-sm"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none text-sm"
               >
                 <option value="">انتخاب کریں</option>
                 {shuabay.map((item, index) => (
@@ -524,7 +601,7 @@ const [tehsils, setTehsils] = useState([]);
                 name="taqdeer"
                 value={formData.taqdeer}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none  appearance-none text-sm"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none text-sm"
               >
                 <option value="">انتخاب کریں</option>
                 {taqdeer.map((item, index) => (

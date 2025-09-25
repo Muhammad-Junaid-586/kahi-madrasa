@@ -103,6 +103,7 @@
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.216 0.006 56.043);
+  /* --sidebar: oklch(60.84% 0.15898 47.47); */
   --sidebar-foreground: oklch(0.985 0.001 106.423);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
@@ -121,3 +122,21 @@
   }
 }
 
+
+.no-print{
+  @media print {
+    display: none;
+  }
+}
+.print-flex{
+  @media print {
+   flex: 1;
+  }
+}
+/* .hiding{
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.hiding::-webkit-scrollbar{
+  display: none;
+} */

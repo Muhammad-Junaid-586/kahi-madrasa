@@ -155,11 +155,11 @@ export function AppSidebar({
   ...props
 }) {
   return (
-    <Sidebar collapsible="offcanvas" {...props}>
-      <SidebarHeader className="shrink-0">
-        <SidebarMenu>
+    <Sidebar collapsible="offcanvas" {...props} className="no-print" >
+      <SidebarHeader className="shrink-0 ">
+        <SidebarMenu className={"hiding"} >
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
+            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5 ">
               <Link href="/">
                 <IconInnerShadowTop className="!size-5" />
                 <span className="text-base font-semibold">Kahi Madrasa</span>
@@ -168,10 +168,10 @@ export function AppSidebar({
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent className="flex-1 -mt-4">
+      <SidebarContent className="flex-1 -mt-4 hiding">
         <NavMain items={data.navMain} />
-        {/* <NavDocuments items={data.documents} /> */}
-        {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}
+        <NavDocuments items={data.documents} />
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
