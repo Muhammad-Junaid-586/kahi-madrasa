@@ -316,7 +316,7 @@ const EditeStudent = ({id}) => {
                 جیپی جی، پی این جی یا جی آئی ایف فارمیٹ (زیادہ سے زیادہ سائز: 5MB)
               </p>
               {/* Debug info */}
-              <p className="text-xs text-gray-400 mt-1">
+              <p className="text-xs text-gray-400 mt-1 heading">
                 تصویر تبدیل ہوئی: {isImageChanged ? 'ہاں' : 'نہیں'}
               </p>
             </div>
@@ -348,7 +348,7 @@ const EditeStudent = ({id}) => {
                 name="grade"
                 value={formData.grade}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none text-sm"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none"
               >
                 <option value="">انتخاب کریں</option>
                 {shuabay.map((item, index) => (
@@ -416,7 +416,7 @@ const EditeStudent = ({id}) => {
                 name="district"
                 value={formData.district}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none "
               >
                 <option value="">انتخاب کریں</option>
                 {Object.keys(allDistricts).map((district, index) => (
@@ -439,7 +439,7 @@ const EditeStudent = ({id}) => {
                 name="tehsil"
                 value={formData.tehsil}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-green-400 focus:outline-none appearance-none "
                 disabled={!formData.district}
               >
                 <option value="">انتخاب کریں</option>
@@ -650,7 +650,7 @@ const EditeStudent = ({id}) => {
             </button>
             <button
               type="button"
-              onClick={() => router.push('/students')}
+              onClick={() => router.push('/dashboard')}
               className="flex-1 py-3 rounded-lg bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg shadow-md transition"
             >
               منسوخ کریں

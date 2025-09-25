@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+
+label,h1 , button , .heading, table{
+  font-family: 'Noto Nastaliq Urdu', serif;
+}

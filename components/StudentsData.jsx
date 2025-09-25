@@ -44,7 +44,7 @@ const StudentsData = () => {
       </h1>
 
       <div className="overflow-x-auto shadow-lg rounded-lg">
-        <table className="w-full border-collapse text-[11px] overflow-x-scroll">
+        <table className="w-full border-collapse  text-[11px] overflow-x-scroll">
           <thead className="bg-amber-500 text-white sticky top-0">
             <tr >
               <th className="px-1 py-3 text-sm">Admission No</th>
@@ -80,40 +80,19 @@ const StudentsData = () => {
                 <td className="px-1 py-2 font-semibold text-amber-700">
                   {student.taqdeer}
                 </td>
-            <td className=' flex  gap-2 py-2 items-center justify-center'>
+            <td className='px-1  py-2   '>
                 
-  {/* <button  */}
-  {/* //   onClick={async () => { */}
-  {/* //     try { */}
-  {/* //       await axios.delete(`/api/student/${student._id}`);
-  //       alert("Deleted Successfully!");
-  //       // optionally reload students list
-  //       fetchStudentsData();
-  //     } catch (error) { */}
-  {/* //       console.error(error);
-  //     }
-  //   }}
-  //   className="px-4 py-2 my-1 bg-red-600 rounded-lg text-white/80 hover:text-white cursor-pointer"
-  // >
-  //   X
-  // </button> */}
-
-
-
-
-  {/* <Link href={`/students/${student._id}`} className='my-1'>
-    <button className="px-4 py-2 bg-amber-600 rounded-lg text-white/80 hover:text-white cursor-pointer">
-      Edit
-    </button>
-  </Link> */}
+ 
   
-      <Link href={`/dashboard/${student._id}`}>
+      <div className='flex items-center justify-center gap-2'>
+        <Link href={`/dashboard/${student._id}`}>
       <Eye  className="text-blue-500 cursor-pointer text-xl" title="View" />
       </Link>
       <Link href={`/students/${student._id}`}>
       <PencilIcon className="text-green-500 cursor-pointer text-xl" title="Edit" />
       </Link>
       <Trash2 onClick={() => handleDelete(student)} className="text-red-500 cursor-pointer text-xl" title="Delete" />
+      </div>
     
             </td>
 

@@ -95,9 +95,9 @@ export default function AdmissionForm() {
     }
   }, [id]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p className="text-center p-3">Loading...</p>;
 
-  if (!student) return <p>No student found</p>;
+  if (!student) return <p className="text-center p-3">No student found</p>;
 
   
   
@@ -106,12 +106,14 @@ export default function AdmissionForm() {
 
    
      <div className="p-6">
-      <button
-        onClick={handlePrint}
-        className="bg-blue-600 text-white px-4 py-2 rounded no-print"
-      >
-        Print Form
-      </button>
+    <button
+  onClick={handlePrint}
+  className="bg-blue-800 text-white px-6 h-10 rounded-full cursor-pointer no-print flex items-center justify-center pb-2 mx-auto"
+>
+  Print Form
+</button>
+
+
 
       {/* Printable Component */}
      <div  ref={componentRef}>

@@ -40,7 +40,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref)=> {
              <Image className="border-2 border-blue-800 rounded-lg" src={student?.image} alt="Logo" width={100} height={100} />
            </div>
             <div className="flex-1 text-center  pb-2 mb-4">
-           <h1 className="text-2xl font-bold text-blue-900 mb-2">
+           <h1 className="text-2xl font-bold text-blue-900 mb-2 mt-1">
             جامعہ دارالعلوم سراج الاسلام کاہی ہنگو
    
            </h1>
@@ -114,8 +114,8 @@ const PrintAdmissionForm = forwardRef(({ student }, ref)=> {
            </div>
    
            <div className="p-4 space-y-3 text-blue-900">
-             <div className="grid grid-col-1  md:grid-cols-[170px_170px_1fr_1fr] gap-4">
-             {/* <div className="flex gap-4"> */}
+             {/* <div className="grid grid-col-1  md:grid-cols-[170px_170px_1fr_1fr] gap-4"> */}
+             <div className="flex gap-4">
                <div className="flex gap-2 items-center">
                  <span>نام:</span>
                  <Line value={student.name} />
