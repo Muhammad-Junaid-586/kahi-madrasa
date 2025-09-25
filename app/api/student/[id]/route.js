@@ -22,7 +22,7 @@ export async function GET(request, { params }) {
 // UPDATE student (with image support)
 export async function PUT(request, { params }) {
   try {
-    const id = await params.id;
+    const {id} = params;
     await connectToDatabase();
     const formData = await request.formData();
 
@@ -68,7 +68,7 @@ export async function PUT(request, { params }) {
 // DELETE student (also delete image from Cloudinary)
 export async function DELETE(request, { params }) {
   try {
-    const id = await params.id;
+    const {id} = params;
     await connectToDatabase();
     const student = await Student.findById(id);
     if (!student) {
