@@ -39,10 +39,10 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
       {/* print logic */}
 
       {/* Header */}
-      <div className="flex justify-between p-3">
-        <div className="w-[15%]">
+      <div className="flex flex-col md:flex-row justify-between p-3">
+        <div className="w-[15%] ">
           <div
-            className="w-[150px] h-[130px] bg-no-repeat bg-cover bg-center mx-auto rounded-md border-blue-800 border-2 "
+            className="w-[150px] h-[130px] bg-no-repeat  bg-cover bg-center mx-auto rounded-md border-blue-800 border-2 "
             style={{ backgroundImage: `url(${student.image})` }}
           ></div>
         </div>
@@ -57,7 +57,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
             داخلہ فارم
           </h2>
         </div>
-        <div className="w-[15%] flex justify-start">
+        <div className="w-[15%] md:flex md:justify-start pb-1 sm:pb-0  ">
           <div
             className="w-[150px] h-[130px] bg-no-repeat bg-cover bg-center mx-auto rounded-md border-blue-800 border-2"
             style={{ backgroundImage: `url(${student.image})` }}
@@ -120,7 +120,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
 
         <div className="p-4 space-y-3 text-blue-900">
           {/* <div className="grid grid-col-1  md:grid-cols-[170px_170px_1fr_1fr] gap-4"> */}
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row print:flex-row  gap-4">
             <div className="flex gap-2 items-center">
               <span>نام:</span>
               <Line value={student.name} />
@@ -141,7 +141,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
             </div>
           </div>
 
-          <div className="grid grid-col-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-col-1 md:grid-cols-4 print:grid-cols-4 gap-4">
             <div className="flex gap-2 items-center">
               <span>گاؤں:</span>
               <Line value={student.village} />
@@ -162,7 +162,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
             </div>
           </div>
 
-          <div className="grid grid-col-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-col-1 md:grid-cols-3 print:grid-cols-3 gap-4">
             <div className="flex gap-2 items-center">
               <span>سرپرست کا نام:</span>
               <Line value={student?.guardian} />
@@ -186,7 +186,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
         <div className="bg-blue-100 border rounded-xl text-blue-900 border-blue-800 text-center font-bold py-1 mx-auto my-1 w-[140px]">
           جدید طلباء کے لئے
         </div>
-        <div className="flex flex-col md:flex-row justify-between p-4 space-y-2 text-blue-900">
+        <div className="flex flex-col md:flex-row print:flex-row justify-between p-4 space-y-2 text-blue-900">
           <div className="flex  gap-2 items-center">
             <span>جس مدرسہ کو چھوڑ کر ایا ہے اس کا پتہ :</span>
             <Line value={student.previousSchool} />
@@ -197,7 +197,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
             <Line value={student.lastClass} />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-2 justify-between px-4  text-blue-900">
+        <div className="flex flex-col md:flex-row print:flex-row gap-2 justify-between px-4  text-blue-900">
           <div className="flex gap-2 items-center">
             <span> تقدیر:</span>
             <Line value={student?.taqdeer} />
@@ -241,14 +241,14 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
           سند التحاق
         </div>
 
-        <div className="flex flex-col md:flex-row px-3">
+        <div className="flex flex-col md:flex-row print:flex-row px-3">
           <div
-            className="w-[150px] h-[130px] bg-no-repeat bg-cover bg-center mx-auto rounded-md border-blue-800 border-2 -mt-3"
+            className="w-[150px] h-[130px] bg-no-repeat bg-cover bg-center mx-auto rounded-md border-blue-800 border-2 md:-mt-3"
             style={{ backgroundImage: `url(${student.image})` }}
           ></div>
 
           <div className="p-4 space-y-3 text-blue-900 flex-1">
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row print:flex-row gap-4">
               <div className="flex gap-2 ">
                 <span>تصدیق کی جاتی ہے کہ طالب علم مسمی :</span>
                 <Line value={student?.name} />
@@ -259,7 +259,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-1">
+            <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-4 my-1">
               <div className="flex gap-2 items-center">
                 <span>گاؤں:</span>
                 <Line value={student?.village} />
@@ -278,7 +278,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
         </div>
 
         <div className="p-4 space-y-3 text-blue-900">
-          <div className="flex flex-col md:flex-row gap-4 Md:mr-6 md:pr-4">
+          <div className="flex flex-col md:flex-row print:flex-row gap-4 Md:mr-6 md:pr-4">
             <div className="flex gap-2">
               <span>نے فارم پر کر کے حسب اقرار عہد نامہ درجہ :</span>
               <Line value={student?.class} />
@@ -290,7 +290,7 @@ const PrintAdmissionForm = forwardRef(({ student }, ref) => {
             </span>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between gap-2 mt-6">
+          <div className="flex flex-col md:flex-row print:flex-row justify-between gap-2 mt-6">
             <div className="flex gap-2 items-center">
               <span>کمرہ نمبر :</span>
               <Line value={student?.room} />
