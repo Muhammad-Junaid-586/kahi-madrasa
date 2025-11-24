@@ -1,0 +1,14 @@
+@media print {
+  button, nav, header {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid black;
+  }
+}
