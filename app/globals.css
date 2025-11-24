@@ -126,6 +126,7 @@
 .no-print{
   @media print {
     display: none;
+    width: 0;
   }
 }
 .print-flex{
@@ -133,10 +134,12 @@
    flex: 1;
   }
 }
-/* .hiding{
+.hiding{
   overflow-y: scroll;
   scrollbar-width: none;
 }
 .hiding::-webkit-scrollbar{
   display: none;
-} */
+}
+
+

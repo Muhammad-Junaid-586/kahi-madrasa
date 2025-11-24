@@ -10,6 +10,15 @@ const notoNastaliq = Noto_Nastaliq_Urdu({
   variable: "--font-noto-nastaliq",
 });
 
+/*************  ✨ Windsurf Command ⭐  *************/
+/**
+ * The root layout component which wraps the entire app.
+ * It provides the app context and sets the font family to Noto Nastaliq Urdu.
+ *
+ * @param {ReactNode} children - The children components to render
+ * @returns {ReactElement} The root layout component
+ */
+/*******  9099578e-3568-489d-bd49-a71d41419e0f  *******/
 export default function RootLayout({ children }) {
   return (
     <AppContextProvider>
@@ -18,5 +27,7 @@ export default function RootLayout({ children }) {
         <body className={notoNastaliq.variable}>{children}</body>
       </html>
     </AppContextProvider>
+   
+
   );
 }

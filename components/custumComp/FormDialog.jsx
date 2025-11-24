@@ -5,18 +5,20 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import RegistrationForm from "../RegistrationForm";
+
+import { PlusCircle } from "lucide-react"; // ← ICON IMPORT
+import RegistrationForm from "../RegistrationForm2";
 
 const FormDialog = () => {
   return (
-    <div className="flex justify-center items-center h-auto">
+    <div className="flex justify-end items-center h-auto">
       <Dialog>
         <DialogTrigger asChild>
-          <button className="px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700">
-            داخلہ فارم کھولیں
+          <button className="px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 flex items-center gap-2 text-lg">
+            <PlusCircle size={22} className="text-white" />
+            طالب علم رجسٹر کریں
           </button>
         </DialogTrigger>
 
@@ -25,9 +27,7 @@ const FormDialog = () => {
           onInteractOutside={(e) => e.preventDefault()}
           onEscapeKeyDown={(e) => e.preventDefault()}
         >
-          <DialogHeader>
-            
-          </DialogHeader>
+          <DialogHeader></DialogHeader>
 
           <RegistrationForm />
         </DialogContent>

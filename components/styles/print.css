@@ -1,0 +1,34 @@
+/* Hide everything except print area when printing */
+@media print {
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .printTable, .printTable * {
+    visibility: visible !important;
+  }
+
+  /* Remove margins & allow full width */
+  @page {
+    size: A4 landscape;
+    margin: 5mm;
+  }
+
+  .printTable table {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100% !important;
+  }
+
+  /* Hide no-print elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Make text darker */
+  table {
+    color: #000 !important;
+  }
+}

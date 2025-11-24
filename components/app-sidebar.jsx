@@ -18,6 +18,7 @@ import {
   IconSettings,
   IconUsers,
 } from "@tabler/icons-react"
+import { PlusCircle } from "lucide-react"; // ← ICON IMPORT
 
 import { NavDocuments } from "@/components/nav-documents"
 import { NavMain } from "@/components/nav-main"
@@ -42,15 +43,21 @@ const data = {
   },
   navMain: [
     {
-      title: "Students",
+      title: "Dashboard",
       url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Students",
+      url: "/dashboard/studentsDetails",
       icon: IconListDetails,
     },
+    {
+      title: "Add Grade",
+      url: "/dashboard/grade",
+      icon: PlusCircle,
+    },
+
     {
       title: "Analytics",
       url: "#",

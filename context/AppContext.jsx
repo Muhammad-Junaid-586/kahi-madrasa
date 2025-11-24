@@ -10,37 +10,48 @@ export const useAppContext = ()=>{
 }
 
 export const AppContextProvider = ({children})=>{
-  
-
-  const [students, setStudents] = useState([])
-
-
+  // Students state and fetch
+  const [students, setStudents] = useState([]);
   const fetchStudentsData = async () => {
-        try {
-          const { data } = await axios.get('/api/student/get')
-          if (data.success) {
-            console.log(data.students)
-            setStudents(data.students)
-          }
-        } catch (error) {
-          console.error("Error fetching students:", error)
-        }
+    try {
+      const { data } = await axios.get('/api/student/get');
+      if (data.success) {
+        setStudents(data.students);
       }
-  
-    useEffect(() => {
-      
-  
-      fetchStudentsData()
-    }, [])
-   
-  const value = {
-   fetchStudentsData,
-
-   students,
-   setStudents
-
+    } catch (error) {
+      console.error("Error fetching students:", error);
+    }
   }
 
+  // Grades state and fetch
+  const [grades, setGrades] = useState([]);
+  const fetchGradesData = async () => {
+    try {
+      const { data } = await axios.get('/api/grade/get'); // Matches your grades API
+      if (data.success) {
+        console.log(data.grades);
+        
+        setGrades(data.grades);
+      }
+    } catch (error) {
+      console.error("Error fetching grades:", error);
+    }
+  }
+
+  // Optional: fetch both on mount, or fetch grades where needed
+  useEffect(() => {
+    fetchStudentsData();
+    fetchGradesData();
+  }, []);
+
+  const value = {
+    fetchStudentsData,
+    fetchGradesData,
+    students,
+    setStudents,
+    grades,
+    setGrades
+  }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }

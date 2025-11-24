@@ -1,0 +1,33 @@
+/* =============== */
+@media print {
+  /* Hide the sidebar completely */
+  .app-sidebar, /* If this is your sidebar class */
+  [data-slot="sidebar"], /* shadcn uses data-slot for sidebar */
+  [data-testid="sidebar"] {
+    display: none !important;
+  }
+
+  /* Reset the sidebar provider and content area to full width */
+  .sidebar-provider,
+  .sidebar-inset,
+  .main,
+  .print-flex,
+  .flex,
+  [data-slot='main'] {
+    /* Use 100% width and remove flex sizing */
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Optional: remove page header for print, if wanted */
+  .site-header,
+  [data-testid="header"] {
+    display: none !important;
+  }
+}
+
+/* =============== */
