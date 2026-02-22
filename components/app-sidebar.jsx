@@ -169,7 +169,7 @@ export function AppSidebar({
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5 ">
               <Link href="/">
                 <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Student Admission Form</span>
+                <span className="text-base font-semibold">Students Admission Form</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
